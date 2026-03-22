@@ -16,7 +16,8 @@
     html { scroll-behavior: smooth; }
 
     body {
-      background: var(--bg);
+      background-color: #090909;
+      background-image: radial-gradient(ellipse 40% 40% at 25% 35%, rgba(64, 138, 113, 0.25) 0%, transparent 70%);
       color: var(--text);
       font-family: 'DM Mono', monospace;
       font-weight: 300;
@@ -72,7 +73,7 @@
       text-transform: uppercase;
       transition: color 0.25s;
     }
-    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover { color: var(--accent); }
 
     /* ── Sections ── */
     section {
@@ -190,6 +191,11 @@
     .stack {
        max-width: none;
        padding: 0;
+    }
+
+    .section-wrap-stack {
+      padding-bottom: 4rem;
+      /* padding-top: 4rem; */
     }
 
     .stack-grid {
