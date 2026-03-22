@@ -1,4 +1,13 @@
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vladi — Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
       --bg: #090909;
@@ -150,12 +159,7 @@
     .btn-ghost:hover { background: var(--border); color: var(--text); }
 
     /* ── Section header ── */
-    .section-wrap { 
-      padding: 8rem 2rem; 
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
+    .section-wrap { padding: 8rem 2rem; }
     .section-label {
       font-size: 10px;
       letter-spacing: 0.25em;
@@ -163,14 +167,6 @@
       color: var(--accent);
       margin-bottom: 1rem;
     }
-
-    .section-wrap {
-        /* style="max-width:900px;margin:0 auto;padding-top:2rem" */
-        /* style="max-width:900px;margin:0 auto;padding-top:2rem" */
-
-    }
-
-
     .section-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(2.2rem, 4vw, 3.5rem);
@@ -181,12 +177,6 @@
     }
 
     /* ── Stack ── */
-
-    .stack {
-       max-width: none;
-       padding: 0;
-    }
-
     .stack-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -215,12 +205,6 @@
     }
 
     /* ── Projects ── */
-
-    .projects {
-      max-width: none;
-      padding: 0;
-    }
-
     .projects-list { display: flex; flex-direction: column; gap: 1px; }
     .project-card {
       background: var(--card);
@@ -283,12 +267,6 @@
     .project-card:hover .project-arrow { transform: translate(3px, -3px); color: var(--accent); }
 
     /* ── Contact ── */
-    .contact {
-      /* style="max-width:none;padding:0" */
-      max-width: none; 
-      padding: 0;
-    }
-
     .contact-wrap {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -324,10 +302,6 @@
       font-size: 11px;
     }
 
-    .built-by {
-      color:#333;
-    }
-
     /* ── Scroll reveal ── */
     .reveal {
       opacity: 0;
@@ -355,3 +329,154 @@
       .contact-wrap { grid-template-columns: 1fr; }
       footer { flex-direction: column; gap: 1rem; text-align: center; }
     }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a class="nav-logo" href="#">VK</a>
+    <ul class="nav-links">
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" style="max-width:1100px">
+    <p class="hero-eyebrow">Full Stack Developer — Haifa, Israel</p>
+    <h1 class="hero-name">Vladi<br><span>Kovalev</span></h1>
+    <p class="hero-sub">
+      I build clean, purposeful backend systems and APIs — Node.js, PostgreSQL, Express.
+      Currently open to new opportunities.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <div class="section-wrap" style="max-width:900px;margin:0 auto">
+    <section id="stack" style="max-width:none;padding:0">
+      <div class="reveal">
+        <p class="section-label">Technical Stack</p>
+        <h2 class="section-title">What I work with</h2>
+      </div>
+      <div class="stack-grid reveal">
+        <div class="stack-item"><div class="stack-item-name">Node.js</div><div class="stack-item-type">Runtime</div></div>
+        <div class="stack-item"><div class="stack-item-name">Express</div><div class="stack-item-type">Framework</div></div>
+        <div class="stack-item"><div class="stack-item-name">PostgreSQL</div><div class="stack-item-type">Database</div></div>
+        <div class="stack-item"><div class="stack-item-name">Prisma ORM</div><div class="stack-item-type">ORM</div></div>
+        <div class="stack-item"><div class="stack-item-name">JWT + Bcrypt</div><div class="stack-item-type">Auth</div></div>
+        <div class="stack-item"><div class="stack-item-name">React</div><div class="stack-item-type">Frontend</div></div>
+        <div class="stack-item"><div class="stack-item-name">Tailwind CSS</div><div class="stack-item-type">Styling</div></div>
+        <div class="stack-item"><div class="stack-item-name">Git / GitHub</div><div class="stack-item-type">Version Control</div></div>
+        <div class="stack-item"><div class="stack-item-name">REST APIs</div><div class="stack-item-type">Architecture</div></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section-wrap" style="max-width:900px;margin:0 auto;padding-top:2rem">
+    <section id="projects" style="max-width:none;padding:0">
+      <div class="reveal">
+        <p class="section-label">Work</p>
+        <h2 class="section-title">Projects</h2>
+      </div>
+      <div class="projects-list reveal">
+
+        <a href="https://api.yourdomain.com" class="project-card" target="_blank">
+          <div>
+            <div class="project-name">Music Journal API</div>
+            <div class="project-desc">
+              A RESTful API for journaling music listening experiences and discovering new music.
+              Features JWT authentication, full CRUD operations, and a clean resource architecture.
+            </div>
+            <div class="project-tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Prisma</span>
+              <span class="tag">JWT</span>
+            </div>
+          </div>
+          <div class="project-arrow">↗</div>
+        </a>
+
+        <a href="#" class="project-card" target="_blank">
+          <div>
+            <div class="project-name">Vacation Management System</div>
+            <div class="project-desc">
+              Full-stack application for managing employee vacation requests.
+              Built with a React frontend and a Node/Express backend with role-based access control.
+            </div>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">MySQL</span>
+            </div>
+          </div>
+          <div class="project-arrow">↗</div>
+        </a>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="section-wrap" style="max-width:900px;margin:0 auto;padding-top:2rem">
+    <section id="contact" style="max-width:none;padding:0">
+      <div class="reveal">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">Let's talk</h2>
+      </div>
+      <div class="contact-wrap reveal">
+        <p class="contact-text">
+          I'm currently open to full-time and freelance opportunities — backend, full-stack, or API work.
+          If you have a project in mind or just want to connect, reach out.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:you@yourdomain.com" class="contact-link">
+            <span>Email</span><span>→</span>
+          </a>
+          <a href="https://github.com/yourusername" class="contact-link" target="_blank">
+            <span>GitHub</span><span>→</span>
+          </a>
+          <a href="https://linkedin.com/in/yourusername" class="contact-link" target="_blank">
+            <span>LinkedIn</span><span>→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2026 Vladi Kovalev</span>
+    <span style="color:#333">Designed & built by me</span>
+  </footer>
+
+  <script>
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80);
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
